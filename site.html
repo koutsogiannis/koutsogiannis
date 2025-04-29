@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Υπηρεσίες Τρακτέρ & Συλλεκτικών</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header */
+        .navbar {
+            background-color: #1f2937;
+            color: white;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .navbar .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('tractor-background.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #1f2937;
+        }
+
+        .service-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fefefe;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin: 15px 0;
+            color: #f39c12;
+        }
+
+        .service-card p {
+            padding: 0 15px 20px;
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Contact/Phone */
+        .phone {
+            background-color: #2d3748;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .phone h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .phone p {
+            font-size: 1.5rem;
+            color: #f39c12;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Λογότυπο"> <!-- replace with your logo -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Αρχική</a></li>
+                <li><a href="#services">Υπηρεσίες</a></li>
+                <li><a href="#about">Σχετικά</a></li>
+                <li><a href="#contact">Επικοινωνία</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Εξειδικευμένες Υπηρεσίες Τρακτέρ & Συλλεκτικών</h1>
+            <p>Επαγγελματική συντήρηση, επισκευή και ανταλλακτικά με αξιοπιστία</p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <h2>Οι Υπηρεσίες μας</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="tractor-service.jpg" alt="Συντήρηση Τρακτέρ">
+                <h3>Συντήρηση Τρακτέρ</h3>
+                <p>Ολοκληρωμένες υπηρεσίες για τρακτέρ όλων των τύπων και μοντέλων.</p>
+            </div>
+            <div class="service-card">
+                <img src="harvester-service.jpg" alt="Συντήρηση Συλλεκτικών">
+                <h3>Συλλεκτικά Μηχανήματα</h3>
+                <p>Εξειδικευμένη φροντίδα για βαμβακοσυλλεκτικές και θεριζοαλωνιστικές μηχανές.</p>
+            </div>
+            <div class="service-card">
+                <img src="spare-parts.jpg" alt="Ανταλλακτικά">
+                <h3>Ανταλλακτικά</h3>
+                <p>Γνήσια ανταλλακτικά με τοποθέτηση και εγγύηση καλής λειτουργίας.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>Σχετικά με Εμάς</h2>
+        <p>Με πολυετή εμπειρία στον χώρο των αγροτικών μηχανημάτων, προσφέρουμε αξιόπιστες λύσεις για κάθε ανάγκη συντήρησης και επισκευής. Στόχος μας είναι η άμεση εξυπηρέτηση και η ποιότητα των υπηρεσιών μας.</p>
+    </section>
+
+    <!-- Phone Contact -->
+    <section class="phone" id="contact">
+        <h2>Τηλέφωνο Επικοινωνίας</h2>
+        <p>📞 6977 123 456</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Υπηρεσίες Τρακτέρ & Συλλεκτικών. Κατασκευάστηκε με επαγγελματισμό.
+    </footer>
+
+</body>
+</html>
